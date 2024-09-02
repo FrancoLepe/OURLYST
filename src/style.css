@@ -1,0 +1,191 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Josefin Sans';
+    background: linear-gradient(135deg, hsl(49, 100%, 97%), rgb(255, 255, 255));
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+}
+
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 250px;
+    z-index: -1;
+}
+
+.background-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    object-position: left;
+}
+.logo img {
+    height: 50px;  /* Adjust height as needed */
+    width: auto;   /* Maintain aspect ratio */
+    max-width: 100%; /* Optional: Ensures the logo fits within its container */
+}
+
+.container {
+    width: 500px;
+    max-width: 700px;
+    margin: 0 30px;
+    margin-top: 55px;
+    margin-bottom: 100px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title {
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 5px;
+}
+
+.new-item {
+    background-color: hsl(0, 0%, 100%);
+    height: 50px;
+    margin-top: 50px;
+    border-radius: 6px;
+    display: flex;
+    box-shadow: 0 0px 20px rgb(255, 255, 255);
+}
+
+.check-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+}
+
+.check-mark {
+    width: 30px;
+    height: 30px;
+    border: 2px solid hsl(237,14%,26%);
+    border-radius: 50%;
+    cursor:pointer;
+    transition: all 0.25s;
+}
+
+.check-mark:hover , .check-mark.checked{
+    background-color: rgb(190, 229, 254);
+    box-shadow: 0 0 20px #00a0fcdb, 
+                0 0 20px rgba(39, 176, 255, 0.6), 
+                0 0 20px rgba(39, 176, 255, 0.4);
+}
+
+
+
+.new-item-input {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    width: 300px;
+}
+
+.new-item-input form {
+    flex-grow: 1;
+}
+
+.new-item-input input {
+    width: 100%;
+    padding: 10px 0;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: hsl(240, 9%, 2%);
+    font-size: 17px;
+}
+
+.new-item-input input::placeholder {
+    color: hsl(231, 11%, 51%);
+}
+
+.item-wrapper {
+    margin-top: 60px;
+    background-color: hsla(233, 100%, 95%, 0.362);
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0px 2px 30px hsl(0, 0%, 0%, 0.4);
+}
+
+.item {
+    width: 100%;
+    display: flex;
+    height: 50px;
+    border-bottom: 1px solid hsl(217, 100%, 78%);
+    color: hsl(240, 5%, 11%);
+    font-size: 17px;
+   
+}
+
+.item.completed .item-text {
+    text-decoration:line-through double blue;
+    
+    color: hsl(0, 0%, 0%);
+    text-shadow: 0 0.2px 0 blue, /* Thickens the line */
+                 0 -0.2px 0 blue;
+   
+
+}
+
+.item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0px 7px 0px hsl(235, 21% 11%);
+    border-color: hsl(233, 38%, 9%);
+}
+
+.item-text {
+    display: flex;
+    align-items: center;
+}
+.delete-btn {
+    height: 30px;
+    margin-top: 10px;
+    margin-left: auto; /* Pushes the delete button to the far right */
+    margin-right: 10px;  /* added cushion to the right side*/
+    background-color: transparent;
+    cursor: pointer;
+    padding: 10px; /* Optional padding to space it from the edge */
+    color: hsl(0, 100%, 74%);
+    border: 2px solid rgb(212, 220, 241); /* Defines the border with color and thickness */
+    border-radius: 6px; /* Optional: Adds rounded corners */
+    text-decoration: none;
+    z-index: 2;
+
+    display: flex;
+    align-items: center; /* Center vertically within the button */
+    justify-content: center; /* Center horizontally within the button */
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.delete-btn:hover {
+    color: hsl(240, 49%, 46%);
+    border-color: hsl(240, 49%, 46%); /* Optional: Change border color on hover */
+}
+
+
+.items-count {
+    height: 55px;
+    width: 100%;
+    color: hsl(233,14%,35%);
+    display: flex;
+    justify-content: space-between;
+    padding: 0 17px;
+    align-items: center;
+    z-index: 2;
+}
+
+

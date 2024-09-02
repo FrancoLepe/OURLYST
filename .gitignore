@@ -1,0 +1,19 @@
+
+node_modules/dotenv/
+node_modules
+node_modules
+# Environment files
+.env
+
+# Build output
+dist/
+
+# Logs
+firebase-debug.log
+
+# Node.js
+
+npm-debug.log
+
+# MacOS
+.DS_Store
